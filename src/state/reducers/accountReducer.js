@@ -1,0 +1,16 @@
+//function that returns a state
+
+const reducer = (state = 0, action) => {
+  switch (action.type) {
+    case "deposit":
+      return state + action.payload;
+    case "withdraw":
+      return state - action.payload;
+
+    default:
+      return state;
+    //do nothing
+  }
+};
+
+export default reducer;
